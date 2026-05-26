@@ -1,0 +1,325 @@
+/* ─── Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #080808;
+      color: #f0ebe3;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Grain overlay ─── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ─── Scrollbar ─── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #080808; }
+    ::-webkit-scrollbar-thumb { background: #b83228; border-radius: 2px; }
+
+    /* ─── Navbar ─── */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      transition: background 0.4s, border-color 0.4s;
+    }
+    #navbar.scrolled {
+      background: rgba(8,8,8,0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(240,235,227,0.05);
+    }
+
+    /* ─── Parallax Hero ─── */
+    #hero {
+      position: relative;
+      height: "";
+      min-height: "";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background-image: url("image/compet-ytb.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax-bg {
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(184,50,40,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 80% 80%, rgba(184,50,40,0.08) 0%, transparent 60%);
+      z-index: 0;
+      will-change: transform;
+    }
+
+    .parallax-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(240,235,227,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,235,227,0.015) 1px, transparent 1px);
+      background-size: 80px 80px;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .parallax-word {
+      position: absolute;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(120px, 20vw, 280px);
+      color: rgba(184,50,40,0.04);
+      pointer-events: none;
+      will-change: transform;
+      line-height: 1;
+      user-select: none;
+    }
+    .parallax-word-1 { top: 5%; left: -5%; }
+    .parallax-word-2 { bottom: 5%; right: -5%; text-align: right; }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px;
+      padding: 0 20px;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(8,8,8,0.65), rgba(8,8,8,0.45));
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* ─── Section label ─── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #b83228;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #b83228;
+      opacity: 0.7;
+    }
+
+    /* ─── Video wrapper ─── */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #141414;
+      overflow: hidden;
+      border: 1px solid rgba(240,235,227,0.06);
+    }
+    .video-wrapper iframe {
+      width: 100%; height: 100%;
+      display: block; border: none;
+    }
+    .video-shine {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(184,50,40,0.10) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .video-tag {
+      position: absolute;
+      top: 20px; left: 20px;
+      background: #b83228;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      padding: 4px 14px;
+      z-index: 3;
+    }
+    .video-ep {
+      position: absolute;
+      bottom: 20px; right: 20px;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      color: rgba(240,235,227,0.35);
+      z-index: 3;
+    }
+
+    /* ─── Shorts grid ─── */
+    .short-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      background: #141414;
+      overflow: hidden;
+      border: 1px solid rgba(240,235,227,0.06);
+      transition: transform 0.45s cubic-bezier(.22,1,.36,1), border-color 0.3s;
+    }
+    .short-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(184,50,40,0.4);
+    }
+    .short-card iframe {
+      width: 100%; height: 100%;
+      display: block; border: none;
+      pointer-events: none;
+    }
+    .short-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 45%);
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .short-card:hover .short-card-overlay { opacity: 0.4; }
+    .short-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(184,50,40,0.92);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10px; letter-spacing: 0.18em;
+      padding: 3px 10px; z-index: 2;
+    }
+    .short-num {
+      position: absolute; bottom: 14px; left: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 700;
+      color: rgba(240,235,227,0.10);
+      z-index: 2; line-height: 1;
+    }
+
+    /* ─── Concept section ─── */
+    .concept-section {
+      position: relative;
+      overflow: hidden;
+      background: #0f0f0f;
+      border-top: 1px solid rgba(240,235,227,0.05);
+      border-bottom: 1px solid rgba(240,235,227,0.05);
+    }
+    .concept-bg-quote {
+      position: absolute;
+      top: -60px; left: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 480px;
+      color: rgba(184,50,40,0.03);
+      pointer-events: none;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* ─── Pill cards ─── */
+    .pill {
+      display: flex; align-items: flex-start;
+      gap: 20px; padding: 22px 26px;
+      border: 1px solid rgba(240,235,227,0.07);
+      background: rgba(255,255,255,0.015);
+      transition: border-color 0.3s, background 0.3s, transform 0.35s cubic-bezier(.22,1,.36,1);
+    }
+    .pill:hover {
+      border-color: rgba(184,50,40,0.35);
+      background: rgba(184,50,40,0.04);
+      transform: translateX(6px);
+    }
+
+    /* ─── Team ─── */
+    .team-card {
+      background: #141414;
+      border: 1px solid rgba(240,235,227,0.04);
+      padding: 28px 22px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .team-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: #b83228;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+    }
+    .team-card:hover { background: #1c1c1c; }
+    .team-card:hover::after { transform: scaleX(1); }
+
+    /* ─── Mobile nav ─── */
+    #nav-menu {
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(8,8,8,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(240,235,227,0.05);
+      padding: 16px 0;
+      display: none;
+      z-index: 999;
+    }
+    #nav-menu.open { display: block; }
+
+    /* ─── Animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes revealLine {
+      from { width: 0; }
+      to   { width: 80px; }
+    }
+
+    .anim-fade { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .anim-fade.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── Cursor accent ─── */
+    .cursor-dot {
+      position: fixed;
+      width: 8px; height: 8px;
+      background: #b83228;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: transform 0.08s ease, opacity 0.3s;
+      mix-blend-mode: difference;
+    }
+    @media (max-width: 768px) { .cursor-dot { display: none; } }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .shorts-3col { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .shorts-3col { grid-template-columns: 1fr 1fr; gap: 10px; }
+      #navbar { padding: 0 20px; }
+    }
+    @media (max-width: 400px) {
+      .shorts-3col { grid-template-columns: 1fr; }
+    }

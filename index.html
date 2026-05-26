@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Punch Lab — La punchline a une histoire. On la raconte.</title>
+  <meta name="description" content="Punch Lab est une série documentaire qui décortique les punchlines du rap francophone pour révéler leur filiation avec les grandes figures de l'éloquence, de Cicéron à Booba.">
+  <meta name="keywords" content="punch lab, rap francophone, punchline, éloquence, rhétorique, Booba, Nekfeu, Cicéron, série documentaire, YouTube">
+  <meta name="author" content="Punch Lab">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.punchlab.fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.punchlab.fr/">
+  <meta property="og:title" content="Punch Lab — La punchline a une histoire. On la raconte.">
+  <meta property="og:description" content="De Cicéron à Booba, la punchline n'a jamais cessé d'exister. Punch Lab décortique les grands sons du rap francophone.">
+  <meta property="og:image" content="https://www.punchlab.fr/image/og-cover.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Punch Lab">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@PunchLabYT">
+  <meta name="twitter:title" content="Punch Lab — La punchline a une histoire. On la raconte.">
+  <meta name="twitter:description" content="De Cicéron à Booba, la punchline n'a jamais cessé d'exister.">
+  <meta name="twitter:image" content="https://www.punchlab.fr/image/og-cover.jpg">
+
+  <!-- Favicons (fallback to available image) -->
+  <!-- Note: original favicon files/folders were missing; using an existing project image so browsers can show an icon immediately -->
+  <link rel="icon" type="image/png" sizes="32x32" href="image/compet-ytb.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/compet-ytb.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/compet-ytb.png">
+  <link rel="shortcut icon" href="image/compet-ytb.png" type="image/png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Punch Lab",
+    "url": "https://www.punchlab.fr",
+    "description": "Série documentaire sur la punchline dans le rap francophone et son héritage rhétorique.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Punch Lab",
+      "url": "https://www.punchlab.fr"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir:    '#080808',
+            blanc:   '#f0ebe3',
+            rouge:   '#b83228',
+            'rouge-vif': '#d63b2f',
+            gris:    '#141414',
+            'gris-md': '#1c1c1c',
+            or:      '#c9973c',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"Bebas Neue"', 'Impact', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '0.25em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     CURSOR DOT
+════════════════════════════════════════ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header role="banner">
+  <nav id="navbar" aria-label="Navigation principale">
+    <!-- Brand -->
+    <a href="#hero" class="flex items-center gap-3" aria-label="Punch Lab – Retour à l'accueil">
+      <img src="image/compet ytb .png" alt="Logo Punch Lab" class="h-12 w-auto" width="48" height="48" loading="eager">
+      <span class="font-mono text-xl tracking-widest" aria-hidden="true">
+        PUNCH<span class="text-rouge">LAB</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-1 list-none" role="list">
+      <li><a href="#hero"    class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Accueil</a></li>
+      <li><a href="#video"   class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Vidéo</a></li>
+      <li><a href="#shorts"  class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Shorts</a></li>
+      <li><a href="#concept" class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Concept</a></li>
+      <li><a href="#equipe"  class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Équipe</a></li>
+      <li>
+        <a href="https://www.youtube.com/@PunchLab" target="_blank" rel="noopener noreferrer"
+           class="ml-4 px-5 py-2 border border-rouge text-rouge text-xs tracking-widest uppercase hover:bg-rouge hover:text-blanc transition-all duration-200 font-mono">
+          YouTube ↗
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile toggle -->
+    <button id="navToggle" class="md:hidden text-blanc/80 hover:text-rouge transition-colors" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+      <svg id="iconOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+      </svg>
+      <svg id="iconClose" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="hidden">
+        <line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="nav-menu" role="navigation" aria-label="Menu mobile">
+    <ul class="list-none flex flex-col" role="list">
+      <li><a href="#hero"    class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Accueil</a></li>
+      <li><a href="#video"   class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Vidéo</a></li>
+      <li><a href="#shorts"  class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Shorts</a></li>
+      <li><a href="#concept" class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Concept</a></li>
+      <li><a href="#equipe"  class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Équipe</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO (PARALLAX)
+════════════════════════════════════════ -->
+<section id="hero" aria-label="Présentation Punch Lab">
+  <div class="parallax-bg" id="parallaxBg" aria-hidden="true"></div>
+  <div class="parallax-lines" id="parallaxLines" aria-hidden="true"></div>
+  <div class="parallax-word parallax-word-1" id="parallaxWord1" aria-hidden="true">RAP</div>
+  <div class="parallax-word parallax-word-2" id="parallaxWord2" aria-hidden="true">ÉLOQUENCE</div>
+
+  <div class="hero-content px-6 max-w-4xl mx-auto">
+    <!-- Badge -->
+    <p class="inline-flex items-center gap-3 text-xs tracking-widest uppercase text-blanc/40 mb-8" style="animation: fadeUp 0.7s 0.1s ease both; opacity:0;">
+      <span class="w-8 h-px bg-rouge/60 inline-block"></span>
+      Série documentaire · Rap &amp; Éloquence
+      <span class="w-8 h-px bg-rouge/60 inline-block"></span>
+    </p>
+
+    <!-- Title -->
+    <h1 class="font-display font-black leading-none tracking-tight" style="animation: fadeUp 0.7s 0.22s ease both; opacity:0;">
+      <span class="block text-blanc" style="font-size: clamp(64px, 12vw, 160px);">PUNCH</span>
+      <span class="block text-rouge" style="font-size: clamp(64px, 12vw, 160px); margin-top: -0.1em;">LAB</span>
+    </h1>
+
+    <!-- Divider -->
+    <div class="mx-auto mt-8 mb-8 h-px bg-rouge" style="animation: revealLine 0.9s 0.5s ease both; width:0;"></div>
+
+    <!-- Subtitle -->
+    <p class="text-blanc/55 font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="animation: fadeUp 0.7s 0.55s ease both; opacity:0;">
+      De <strong class="text-blanc/80 font-medium">Cicéron</strong> à <strong class="text-blanc/80 font-medium">Booba</strong>,
+      la punchline n'a jamais cessé d'exister.
+      Punch Lab décortique les grands sons du rap francophone pour révéler leur filiation directe avec les plus grandes figures de l'éloquence.
+    </p>
+
+    <!-- CTA -->
+    <div class="mt-12 flex items-center justify-center gap-6 flex-wrap" style="animation: fadeUp 0.7s 0.68s ease both; opacity:0;">
+      <a href="#video" class="px-8 py-3.5 bg-rouge text-blanc font-mono text-sm tracking-widest uppercase hover:bg-rouge-vif transition-colors duration-200">
+        Voir l'épisode →
+      </a>
+      <a href="#concept" class="px-8 py-3.5 border border-blanc/15 text-blanc/60 font-mono text-sm tracking-widest uppercase hover:border-blanc/40 hover:text-blanc/90 transition-all duration-200">
+        Le concept
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     VIDEO PRINCIPALE
+════════════════════════════════════════ -->
+<section id="video" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="video-heading">
+  <div class="anim-fade">
+    <div class="section-label">Vidéo principale</div>
+    <h2 id="video-heading" class="font-display font-bold mb-3" style="font-size: clamp(28px, 4vw, 48px);">
+      Dernier <em class="text-rouge italic">épisode</em>
+    </h2>
+    <p class="text-blanc/35 text-sm tracking-wider mb-10 font-light">Punch Lab — La punchline a une histoire. On la raconte.</p>
+  </div>
+
+  <div class="video-wrapper anim-fade">
+    <iframe
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&color=white"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      title="Punch Lab — Rap ou Histoire ? Épisode principal"
+    ></iframe>
+    <div class="video-shine" aria-hidden="true"></div>
+    <div class="video-tag" aria-label="Nouvel épisode">Nouvel épisode</div>
+    <div class="video-ep" aria-hidden="true">RAP OU HISTOIRE · 2025</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SHORTS
+════════════════════════════════════════ -->
+<section id="shorts" class="pb-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="shorts-heading">
+  <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+    <div class="anim-fade">
+      <div class="section-label">Shorts</div>
+      <h2 id="shorts-heading" class="font-display font-bold" style="font-size: clamp(22px, 3vw, 38px);">
+        La punchline en <em class="text-rouge italic">60 secondes</em>
+      </h2>
+    </div>
+    <a href="https://www.youtube.com/@PunchLab/shorts" target="_blank" rel="noopener noreferrer"
+       class="anim-fade text-xs tracking-widest uppercase text-blanc/35 hover:text-rouge transition-colors border-b border-blanc/10 hover:border-rouge pb-0.5">
+      Voir tous les shorts ↗
+    </a>
+  </div>
+
+  <div class="grid shorts-3col gap-5" style="grid-template-columns: repeat(3, 1fr);">
+
+    <article class="short-card anim-fade" aria-label="Short 01">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        title="Punch Lab Short 01"
+      ></iframe>
+      <div class="short-card-overlay" aria-hidden="true"></div>
+      <span class="short-badge">Short</span>
+      <span class="short-num" aria-hidden="true">01</span>
+    </article>
+
+    <article class="short-card anim-fade" aria-label="Short 02" style="transition-delay: 0.1s">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        title="Punch Lab Short 02"
+      ></iframe>
+      <div class="short-card-overlay" aria-hidden="true"></div>
+      <span class="short-badge">Short</span>
+      <span class="short-num" aria-hidden="true">02</span>
+    </article>
+
+    <article class="short-card anim-fade" aria-label="Short 03" style="transition-delay: 0.2s">
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+        title="Punch Lab Short 03"
+      ></iframe>
+      <div class="short-card-overlay" aria-hidden="true"></div>
+      <span class="short-badge">Short</span>
+      <span class="short-num" aria-hidden="true">03</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONCEPT
+════════════════════════════════════════ -->
+<section id="concept" class="concept-section py-28 px-6 md:px-10" aria-labelledby="concept-heading">
+  <div class="concept-bg-quote" aria-hidden="true">"</div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center relative z-10">
+
+    <!-- Left -->
+    <div class="anim-fade">
+      <div class="section-label">Le concept</div>
+      <blockquote class="font-display italic font-bold leading-snug text-blanc/90 mb-10 pl-6 border-l-2 border-rouge" style="font-size: clamp(20px, 2.8vw, 32px);">
+        "La punchline est à la base de toute tradition orale — des agoras grecques aux cités françaises."
+      </blockquote>
+      <div class="space-y-5 text-blanc/55 font-light leading-relaxed text-sm md:text-base">
+        <p>Chaque épisode analyse un son ou un vers clé du rap francophone et dresse un pont conceptuel entre les techniques d'écriture contemporaines et l'héritage des grandes figures de l'éloquence.</p>
+        <p>De la rhétorique d'Aristote aux flows de Kendrick, les structures sont les mêmes — seul le décor change.</p>
+        <p>Un ton <strong class="text-blanc/80 font-medium">humoristique et didactique</strong> pour démontrer que la tradition orale n'a jamais vraiment disparu : elle a juste changé de scène.</p>
+      </div>
+    </div>
+
+    <!-- Right : pills -->
+    <div class="flex flex-col gap-5">
+
+      <div class="pill anim-fade">
+        <div class="font-mono text-4xl text-rouge/50 min-w-[44px] leading-none">01</div>
+        <div>
+          <strong class="block text-blanc text-sm font-medium mb-1">La punchline à travers l'Histoire</strong>
+          <p class="text-blanc/50 text-sm font-light leading-relaxed">De l'éloquence antique aux vers du rap francophone — une même tradition, des siècles d'écart.</p>
+        </div>
+      </div>
+
+      <div class="pill anim-fade" style="transition-delay:0.1s">
+        <div class="font-mono text-4xl text-rouge/50 min-w-[44px] leading-none">02</div>
+        <div>
+          <strong class="block text-blanc text-sm font-medium mb-1">Analyse de sons emblématiques</strong>
+          <p class="text-blanc/50 text-sm font-light leading-relaxed">Figures de style, structures rhétoriques, jeux de mots — chaque épisode disséque un morceau clé.</p>
+        </div>
+      </div>
+
+      <div class="pill anim-fade" style="transition-delay:0.2s">
+        <div class="font-mono text-4xl text-rouge/50 min-w-[44px] leading-none">03</div>
+        <div>
+          <strong class="block text-blanc text-sm font-medium mb-1">Rappeurs vs Grandes figures</strong>
+          <p class="text-blanc/50 text-sm font-light leading-relaxed">Booba face à De Gaulle, Nekfeu face à Cicéron — la comparaison comme outil pédagogique.</p>
+        </div>
+      </div>
+
+      <div class="pill anim-fade" style="transition-delay:0.3s">
+        <div class="font-mono text-4xl text-rouge/50 min-w-[44px] leading-none">04</div>
+        <div>
+          <strong class="block text-blanc text-sm font-medium mb-1">Divertissant &amp; pédagogique</strong>
+          <p class="text-blanc/50 text-sm font-light leading-relaxed">Un ton humoristique pour rendre l'histoire de l'éloquence accessible à tous.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ÉQUIPE
+════════════════════════════════════════ -->
+<section id="equipe" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="equipe-heading">
+  <div class="anim-fade mb-14">
+    <div class="section-label">L'équipe</div>
+    <h2 id="equipe-heading" class="font-display font-bold mb-2" style="font-size: clamp(28px, 4vw, 48px);">
+      Ceux qui l'ont fait
+    </h2>
+    <p class="text-blanc/30 text-sm font-light tracking-wider">8 personnes derrière le projet</p>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-0.5">
+
+    <article class="team-card anim-fade">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">BR</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Badi Rayane</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 DEV</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.05s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">DN</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Diegelmann Nathan</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 DEV</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.1s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">BV</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Bohin Victoria</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 A</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.15s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">DM</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Dragassi Matti</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 A</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.2s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">SC</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Soares Cardoso Ricardo</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 B</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.25s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">VD</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Vongkorad Doriane</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.3s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">AA</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Aguesse Alexis</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
+    </article>
+
+    <article class="team-card anim-fade" style="transition-delay:.35s">
+      <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">MV</div>
+      <h3 class="font-display font-bold text-sm leading-snug">Martins Valens</h3>
+      <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo" class="border-t border-blanc/5 px-6 md:px-10 py-14 max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+  <div>
+    <p class="font-mono text-2xl tracking-widest text-blanc/90">
+      PUNCH<span class="text-rouge">LAB</span>
+    </p>
+    <p class="text-xs tracking-widest uppercase text-blanc/20 mt-1 font-light">La punchline a une histoire. On la raconte.</p>
+  </div>
+
+  <nav aria-label="Liens du footer" class="flex gap-8 flex-wrap">
+    <a href="#hero"    class="text-xs tracking-widest uppercase text-blanc/30 hover:text-rouge transition-colors">Accueil</a>
+    <a href="#video"   class="text-xs tracking-widest uppercase text-blanc/30 hover:text-rouge transition-colors">Vidéo</a>
+    <a href="#shorts"  class="text-xs tracking-widest uppercase text-blanc/30 hover:text-rouge transition-colors">Shorts</a>
+    <a href="#concept" class="text-xs tracking-widest uppercase text-blanc/30 hover:text-rouge transition-colors">Concept</a>
+    <a href="#equipe"  class="text-xs tracking-widest uppercase text-blanc/30 hover:text-rouge transition-colors">Équipe</a>
+  </nav>
+
+  <p class="text-xs text-blanc/15 font-light">© 2025 Punch Lab. Tous droits réservés.</p>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Cursor dot ── */
+  const dot = document.getElementById('cursorDot');
+  if (dot && window.matchMedia('(pointer: fine)').matches) {
+    let mx = 0, my = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function animate() {
+      cx += (mx - cx) * 0.12;
+      cy += (my - cy) * 0.12;
+      dot.style.left = cx + 'px';
+      dot.style.top  = cy + 'px';
+      requestAnimationFrame(animate);
+    })();
+  }
+
+  /* ── Navbar scroll ── */
+  const navbar = document.getElementById('navbar');
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Mobile nav ── */
+  const toggle   = document.getElementById('navToggle');
+  const menu     = document.getElementById('nav-menu');
+  const iconOpen  = document.getElementById('iconOpen');
+  const iconClose = document.getElementById('iconClose');
+
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  /* ── Parallax ── */
+  const bg    = document.getElementById('parallaxBg');
+  const lines = document.getElementById('parallaxLines');
+  const w1    = document.getElementById('parallaxWord1');
+  const w2    = document.getElementById('parallaxWord2');
+
+  const parallaxHandler = () => {
+    const y = window.scrollY;
+    if (bg)    bg.style.transform    = `translateY(${y * 0.35}px)`;
+    if (lines) lines.style.transform = `translateY(${y * 0.15}px)`;
+    if (w1)    w1.style.transform    = `translateY(${y * 0.25}px) translateX(${y * -0.04}px)`;
+    if (w2)    w2.style.transform    = `translateY(${y * -0.18}px) translateX(${y * 0.03}px)`;
+  };
+
+  window.addEventListener('scroll', parallaxHandler, { passive: true });
+
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.anim-fade').forEach(el => observer.observe(el));
+
+  /* ── Active nav link on scroll ── */
+  const sections = document.querySelectorAll('section[id], div[id="video"]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          const active = link.getAttribute('href') === '#' + entry.target.id;
+          link.style.color = active ? 'var(--rouge, #b83228)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+
+})();
+</script>
+
+</body>
+</html>
