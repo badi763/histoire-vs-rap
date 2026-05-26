@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
   <title>Punch Lab — La punchline a une histoire. On la raconte.</title>
   <meta name="description" content="Punch Lab est une série documentaire qui décortique les punchlines du rap francophone pour révéler leur filiation avec les grandes figures de l'éloquence, de Cicéron à Booba.">
   <meta name="keywords" content="punch lab, rap francophone, punchline, éloquence, rhétorique, Booba, Nekfeu, Cicéron, série documentaire, YouTube">
@@ -12,7 +11,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.punchlab.fr/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.punchlab.fr/">
   <meta property="og:title" content="Punch Lab — La punchline a une histoire. On la raconte.">
@@ -21,21 +19,17 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Punch Lab">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@PunchLabYT">
   <meta name="twitter:title" content="Punch Lab — La punchline a une histoire. On la raconte.">
   <meta name="twitter:description" content="De Cicéron à Booba, la punchline n'a jamais cessé d'exister.">
   <meta name="twitter:image" content="https://www.punchlab.fr/image/og-cover.jpg">
 
-  <!-- Favicons (fallback to available image) -->
-  <!-- Note: original favicon files/folders were missing; using an existing project image so browsers can show an icon immediately -->
   <link rel="icon" type="image/png" sizes="32x32" href="image/compet-ytb.png">
   <link rel="icon" type="image/png" sizes="16x16" href="image/compet-ytb.png">
   <link rel="apple-touch-icon" sizes="180x180" href="image/compet-ytb.png">
   <link rel="shortcut icon" href="image/compet-ytb.png" type="image/png">
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,7 +45,6 @@
   }
   </script>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -79,7 +72,6 @@
     }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" crossorigin="anonymous">
@@ -87,25 +79,19 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     CURSOR DOT
-════════════════════════════════════════ -->
+
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
-<!-- ═══════════════════════════════════════
-     NAVBAR
-════════════════════════════════════════ -->
+
 <header role="banner">
   <nav id="navbar" aria-label="Navigation principale">
-    <!-- Brand -->
     <a href="#hero" class="flex items-center gap-3" aria-label="Punch Lab – Retour à l'accueil">
       <img src="image/compet ytb .png" alt="Logo Punch Lab" class="h-12 w-auto" width="48" height="48" loading="eager">
       <span class="font-mono text-xl tracking-widest" aria-hidden="true">
-        PUNCH<span class="text-rouge">LAB</span>
+        <span class="text-rouge"></span>
       </span>
     </a>
 
-    <!-- Desktop links -->
     <ul class="hidden md:flex items-center gap-1 list-none" role="list">
       <li><a href="#hero"    class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Accueil</a></li>
       <li><a href="#video"   class="nav-link px-4 py-2 text-xs tracking-widest uppercase text-blanc/70 hover:text-rouge transition-colors duration-200">Vidéo</a></li>
@@ -120,7 +106,6 @@
       </li>
     </ul>
 
-    <!-- Mobile toggle -->
     <button id="navToggle" class="md:hidden text-blanc/80 hover:text-rouge transition-colors" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
       <svg id="iconOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
         <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
@@ -131,7 +116,6 @@
     </button>
   </nav>
 
-  <!-- Mobile menu -->
   <div id="nav-menu" role="navigation" aria-label="Menu mobile">
     <ul class="list-none flex flex-col" role="list">
       <li><a href="#hero"    class="mobile-nav-link block px-8 py-4 text-sm tracking-widest uppercase text-blanc/70 hover:text-rouge border-t border-blanc/5 transition-colors">Accueil</a></li>
@@ -143,9 +127,7 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════
-     HERO (PARALLAX)
-════════════════════════════════════════ -->
+
 <section id="hero" aria-label="Présentation Punch Lab">
   <div class="parallax-bg" id="parallaxBg" aria-hidden="true"></div>
   <div class="parallax-lines" id="parallaxLines" aria-hidden="true"></div>
@@ -153,30 +135,25 @@
   <div class="parallax-word parallax-word-2" id="parallaxWord2" aria-hidden="true">ÉLOQUENCE</div>
 
   <div class="hero-content px-6 max-w-4xl mx-auto">
-    <!-- Badge -->
     <p class="inline-flex items-center gap-3 text-xs tracking-widest uppercase text-blanc/40 mb-8" style="animation: fadeUp 0.7s 0.1s ease both; opacity:0;">
       <span class="w-8 h-px bg-rouge/60 inline-block"></span>
       Série documentaire · Rap &amp; Éloquence
       <span class="w-8 h-px bg-rouge/60 inline-block"></span>
     </p>
 
-    <!-- Title -->
     <h1 class="font-display font-black leading-none tracking-tight" style="animation: fadeUp 0.7s 0.22s ease both; opacity:0;">
       <span class="block text-blanc" style="font-size: clamp(64px, 12vw, 160px);">PUNCH</span>
       <span class="block text-rouge" style="font-size: clamp(64px, 12vw, 160px); margin-top: -0.1em;">LAB</span>
     </h1>
 
-    <!-- Divider -->
     <div class="mx-auto mt-8 mb-8 h-px bg-rouge" style="animation: revealLine 0.9s 0.5s ease both; width:0;"></div>
 
-    <!-- Subtitle -->
     <p class="text-blanc/55 font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="animation: fadeUp 0.7s 0.55s ease both; opacity:0;">
       De <strong class="text-blanc/80 font-medium">Cicéron</strong> à <strong class="text-blanc/80 font-medium">Booba</strong>,
       la punchline n'a jamais cessé d'exister.
       Punch Lab décortique les grands sons du rap francophone pour révéler leur filiation directe avec les plus grandes figures de l'éloquence.
     </p>
-
-    <!-- CTA -->
+    
     <div class="mt-12 flex items-center justify-center gap-6 flex-wrap" style="animation: fadeUp 0.7s 0.68s ease both; opacity:0;">
       <a href="#video" class="px-8 py-3.5 bg-rouge text-blanc font-mono text-sm tracking-widest uppercase hover:bg-rouge-vif transition-colors duration-200">
         Voir l'épisode →
@@ -188,9 +165,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     VIDEO PRINCIPALE
-════════════════════════════════════════ -->
 <section id="video" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="video-heading">
   <div class="anim-fade">
     <div class="section-label">Vidéo principale</div>
@@ -214,9 +188,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SHORTS
-════════════════════════════════════════ -->
 <section id="shorts" class="pb-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="shorts-heading">
   <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
     <div class="anim-fade">
@@ -275,15 +246,11 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     CONCEPT
-════════════════════════════════════════ -->
 <section id="concept" class="concept-section py-28 px-6 md:px-10" aria-labelledby="concept-heading">
   <div class="concept-bg-quote" aria-hidden="true">"</div>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center relative z-10">
 
-    <!-- Left -->
     <div class="anim-fade">
       <div class="section-label">Le concept</div>
       <blockquote class="font-display italic font-bold leading-snug text-blanc/90 mb-10 pl-6 border-l-2 border-rouge" style="font-size: clamp(20px, 2.8vw, 32px);">
@@ -296,7 +263,6 @@
       </div>
     </div>
 
-    <!-- Right : pills -->
     <div class="flex flex-col gap-5">
 
       <div class="pill anim-fade">
@@ -335,9 +301,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     ÉQUIPE
-════════════════════════════════════════ -->
 <section id="equipe" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="equipe-heading">
   <div class="anim-fade mb-14">
     <div class="section-label">L'équipe</div>
@@ -400,9 +363,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     FOOTER
-════════════════════════════════════════ -->
 <footer role="contentinfo" class="border-t border-blanc/5 px-6 md:px-10 py-14 max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
   <div>
     <p class="font-mono text-2xl tracking-widest text-blanc/90">
@@ -422,14 +382,9 @@
   <p class="text-xs text-blanc/15 font-light">© 2025 Punch Lab. Tous droits réservés.</p>
 </footer>
 
-<!-- ═══════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════ -->
 <script>
 (function () {
   'use strict';
-
-  /* ── Cursor dot ── */
   const dot = document.getElementById('cursorDot');
   if (dot && window.matchMedia('(pointer: fine)').matches) {
     let mx = 0, my = 0, cx = 0, cy = 0;
@@ -442,8 +397,6 @@
       requestAnimationFrame(animate);
     })();
   }
-
-  /* ── Navbar scroll ── */
   const navbar = document.getElementById('navbar');
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 30);
@@ -451,7 +404,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ── Mobile nav ── */
   const toggle   = document.getElementById('navToggle');
   const menu     = document.getElementById('nav-menu');
   const iconOpen  = document.getElementById('iconOpen');
@@ -473,7 +425,6 @@
     });
   });
 
-  /* ── Parallax ── */
   const bg    = document.getElementById('parallaxBg');
   const lines = document.getElementById('parallaxLines');
   const w1    = document.getElementById('parallaxWord1');
@@ -489,7 +440,6 @@
 
   window.addEventListener('scroll', parallaxHandler, { passive: true });
 
-  /* ── Scroll reveal ── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -501,7 +451,6 @@
 
   document.querySelectorAll('.anim-fade').forEach(el => observer.observe(el));
 
-  /* ── Active nav link on scroll ── */
   const sections = document.querySelectorAll('section[id], div[id="video"]');
   const navLinks = document.querySelectorAll('.nav-link');
 
