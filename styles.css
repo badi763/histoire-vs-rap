@@ -1,17 +1,15 @@
-/* ─── Base ─── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
       background-color: #080808;
-      color: #f0ebe3;
+      color: #d7c2b0;
       font-family: 'DM Sans', system-ui, sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── Grain overlay ─── */
-    body::after {
+  body::after {
       content: '';
       position: fixed;
       inset: 0;
@@ -20,13 +18,11 @@
       z-index: 9999;
     }
 
-    /* ─── Scrollbar ─── */
-    ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: #080808; }
     ::-webkit-scrollbar-thumb { background: #b83228; border-radius: 2px; }
 
-    /* ─── Navbar ─── */
-    #navbar {
+  #navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
@@ -44,8 +40,7 @@
       border-bottom: 1px solid rgba(240,235,227,0.05);
     }
 
-    /* ─── Parallax Hero ─── */
-    #hero {
+  #hero {
       position: relative;
       height: "";
       min-height: "";
@@ -111,13 +106,12 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(rgba(8,8,8,0.65), rgba(8,8,8,0.45));
+      background: linear-gradient(rgba(8,8,8,0.45), rgba(8,8,8,0.25));
       z-index: 2;
       pointer-events: none;
     }
 
-    /* ─── Section label ─── */
-    .section-label {
+  .section-label {
       display: inline-flex;
       align-items: center;
       gap: 12px;
@@ -126,7 +120,6 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: #b83228;
-      margin-bottom: 20px;
     }
     .section-label::before {
       content: '';
@@ -137,8 +130,7 @@
       opacity: 0.7;
     }
 
-    /* ─── Video wrapper ─── */
-    .video-wrapper {
+  .video-wrapper {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -161,6 +153,7 @@
       position: absolute;
       top: 20px; left: 20px;
       background: #b83228;
+      color: #f0ebe3;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 12px;
       letter-spacing: 0.18em;
@@ -176,8 +169,7 @@
       z-index: 3;
     }
 
-    /* ─── Shorts grid ─── */
-    .short-card {
+  .short-card {
       position: relative;
       aspect-ratio: 9 / 16;
       background: #141414;
@@ -204,6 +196,7 @@
     .short-badge {
       position: absolute; top: 12px; left: 12px;
       background: rgba(184,50,40,0.92);
+      color: #f0ebe3;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 10px; letter-spacing: 0.18em;
       padding: 3px 10px; z-index: 2;
@@ -216,16 +209,31 @@
       z-index: 2; line-height: 1;
     }
 
-    /* ─── Concept section ─── */
-    .concept-section {
+
+.text-blanc{
+  color: rgb(215 194 176 / 90%);
+}
+
+  .concept-section {
       position: relative;
       overflow: hidden;
       background: #0f0f0f;
       border-top: 1px solid rgba(240,235,227,0.05);
       border-bottom: 1px solid rgba(240,235,227,0.05);
     }
-    .concept-bg-quote {
+    .spring-square {
       position: absolute;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(184,50,40,0.22);
+      background: rgba(184,50,40,0.04);
+      pointer-events: none;
+      will-change: transform;
+    }
+    .spring-square.sm { width: 24px; height: 24px; border-color: rgba(184,50,40,0.14); }
+    .spring-square.lg { width: 80px; height: 80px; border-color: rgba(184,50,40,0.10); }
+    .concept-bg-quote {
+  position: absolute;
       top: -60px; left: 20px;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 480px;
@@ -235,8 +243,7 @@
       user-select: none;
     }
 
-    /* ─── Pill cards ─── */
-    .pill {
+  .pill {
       display: flex; align-items: flex-start;
       gap: 20px; padding: 22px 26px;
       border: 1px solid rgba(240,235,227,0.07);
@@ -249,8 +256,7 @@
       transform: translateX(6px);
     }
 
-    /* ─── Team ─── */
-    .team-card {
+  .team-card {
       background: #141414;
       border: 1px solid rgba(240,235,227,0.04);
       padding: 28px 22px;
@@ -271,8 +277,7 @@
     .team-card:hover { background: #1c1c1c; }
     .team-card:hover::after { transform: scaleX(1); }
 
-    /* ─── Mobile nav ─── */
-    #nav-menu {
+  #nav-menu {
       position: fixed;
       top: 72px; left: 0; right: 0;
       background: rgba(8,8,8,0.97);
@@ -285,8 +290,7 @@
     }
     #nav-menu.open { display: block; }
 
-    /* ─── Animations ─── */
-    @keyframes fadeUp {
+  @keyframes fadeUp {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
     }
@@ -298,8 +302,7 @@
     .anim-fade { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .anim-fade.visible { opacity: 1; transform: translateY(0); }
 
-    /* ─── Cursor accent ─── */
-    .cursor-dot {
+  .cursor-dot {
       position: fixed;
       width: 8px; height: 8px;
       background: #b83228;
@@ -312,8 +315,7 @@
     }
     @media (max-width: 768px) { .cursor-dot { display: none; } }
 
-    /* ─── Responsive ─── */
-    @media (max-width: 900px) {
+  @media (max-width: 900px) {
       .shorts-3col { grid-template-columns: 1fr 1fr 1fr; }
     }
     @media (max-width: 640px) {
