@@ -168,8 +168,8 @@
 <section id="video" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="video-heading">
   <div class="anim-fade">
     <div class="section-label">Vidéo principale</div>
-    <h2 id="video-heading" class="font-display font-bold mb-3" style="font-size: clamp(28px, 4vw, 48px);">
-      Dernier <em class="text-rouge italic">épisode</em>
+    <h2 id="video-heading" class="font-display font-bold text-blanc mb-3" style="font-size: clamp(28px, 4vw, 48px);">
+      Nouvel <em class="text-rouge italic">épisode</em>
     </h2>
     <p class="text-blanc/35 text-sm tracking-wider mb-10 font-light">Punch Lab — La punchline a une histoire. On la raconte.</p>
   </div>
@@ -192,7 +192,7 @@
   <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
     <div class="anim-fade">
       <div class="section-label">Shorts</div>
-      <h2 id="shorts-heading" class="font-display font-bold" style="font-size: clamp(22px, 3vw, 38px);">
+      <h2 id="shorts-heading" class="font-display font-bold text-blanc" style="font-size: clamp(22px, 3vw, 38px);">
         La punchline en <em class="text-rouge italic">60 secondes</em>
       </h2>
     </div>
@@ -249,6 +249,8 @@
 <section id="concept" class="concept-section py-28 px-6 md:px-10" aria-labelledby="concept-heading">
   <div class="concept-bg-quote" aria-hidden="true">"</div>
 
+  <canvas id="waveCanvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;"></canvas>
+
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center relative z-10">
 
     <div class="anim-fade">
@@ -257,9 +259,9 @@
         "La punchline est à la base de toute tradition orale — des agoras grecques aux cités françaises."
       </blockquote>
       <div class="space-y-5 text-blanc/55 font-light leading-relaxed text-sm md:text-base">
-        <p>Chaque épisode analyse un son ou un vers clé du rap francophone et dresse un pont conceptuel entre les techniques d'écriture contemporaines et l'héritage des grandes figures de l'éloquence.</p>
-        <p>De la rhétorique d'Aristote aux flows de Kendrick, les structures sont les mêmes — seul le décor change.</p>
-        <p>Un ton <strong class="text-blanc/80 font-medium">humoristique et didactique</strong> pour démontrer que la tradition orale n'a jamais vraiment disparu : elle a juste changé de scène.</p>
+        <p>Chaque épisode de Punch Lab part de punchline issue du rap francophone ou international pour en décortiquer les mécanismes rhétoriques et les mettre en miroir avec un discours ou un texte historique majeur. La structure type d'un épisode suit une progression en trois temps : l'analyse de la punchline, puis le parallèle avec la tradition oratoire classique.</p>
+        <p>Le ton de la chaîne repose sur un équilibre assumé entre rigueur et humour. La pédagogie n'y est jamais dénigrante : Punch Lab ne cherche pas à légitimer le rap aux yeux de ceux qui le méprisent, mais à révéler ce que les auditeurs ressentaient déjà sans pouvoir le nommer.</p>
+        <p> La chaîne s'articule autour de quatre playlists principales : <strong class="text-blanc/80 font-medium">L'Atelier des Punchlines</strong> , dédiée aux techniques rhétoriques ;<strong class="text-blanc/80 font-medium">Dans la tête de…</strong>, qui explore l'univers philosophique d'un rappeur à travers ses textes ; <strong class="text-blanc/80 font-medium">Punchlines par Thème</strong>, qui met en regard des rappeurs d'époques et de pays différents autour d'un sujet universel ; et <strong class="text-blanc/80 font-medium">Lignée des Mots</strong>, qui retrace l'évolution historique de la punchline depuis les origines du rap.</p>
       </div>
     </div>
 
@@ -304,7 +306,7 @@
 <section id="equipe" class="py-28 px-6 md:px-10 max-w-6xl mx-auto" aria-labelledby="equipe-heading">
   <div class="anim-fade mb-14">
     <div class="section-label">L'équipe</div>
-    <h2 id="equipe-heading" class="font-display font-bold mb-2" style="font-size: clamp(28px, 4vw, 48px);">
+    <h2 id="equipe-heading" class="font-display font-bold text-blanc mb-2" style="font-size: clamp(28px, 4vw, 48px);">
       Ceux qui l'ont fait
     </h2>
     <p class="text-blanc/30 text-sm font-light tracking-wider">8 personnes derrière le projet</p>
@@ -314,49 +316,49 @@
 
     <article class="team-card anim-fade">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">BR</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Badi Rayane</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Badi Rayane</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 DEV</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.05s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">DN</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Diegelmann Nathan</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Diegelmann Nathan</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 DEV</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.1s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">BV</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Bohin Victoria</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Bohin Victoria</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 A</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.15s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">DM</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Dragassi Matti</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Dragassi Matti</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 A</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.2s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">SC</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Soares Cardoso Ricardo</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Soares Cardoso Ricardo</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 B</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.25s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">VD</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Vongkorad Doriane</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Vongkorad Doriane</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.3s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">AA</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Aguesse Alexis</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Aguesse Alexis</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
     </article>
 
     <article class="team-card anim-fade" style="transition-delay:.35s">
       <div class="font-mono text-5xl leading-none text-rouge/12 mb-3 select-none" aria-hidden="true">MV</div>
-      <h3 class="font-display font-bold text-sm leading-snug">Martins Valens</h3>
+      <h3 class="font-display font-bold text-blanc text-sm leading-snug">Martins Valens</h3>
       <p class="text-blanc/30 text-xs tracking-widest uppercase mt-1.5 font-light">B1 C</p>
     </article>
 
@@ -385,6 +387,7 @@
 <script>
 (function () {
   'use strict';
+
   const dot = document.getElementById('cursorDot');
   if (dot && window.matchMedia('(pointer: fine)').matches) {
     let mx = 0, my = 0, cx = 0, cy = 0;
@@ -397,25 +400,22 @@
       requestAnimationFrame(animate);
     })();
   }
+
   const navbar = document.getElementById('navbar');
-  const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 30);
-  };
+  const onScroll = () => { navbar.classList.toggle('scrolled', window.scrollY > 30); };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  const toggle   = document.getElementById('navToggle');
-  const menu     = document.getElementById('nav-menu');
+  const toggle    = document.getElementById('navToggle');
+  const menu      = document.getElementById('nav-menu');
   const iconOpen  = document.getElementById('iconOpen');
   const iconClose = document.getElementById('iconClose');
-
   toggle.addEventListener('click', () => {
     const open = menu.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
     iconOpen.classList.toggle('hidden', open);
     iconClose.classList.toggle('hidden', !open);
   });
-
   document.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
@@ -429,7 +429,6 @@
   const lines = document.getElementById('parallaxLines');
   const w1    = document.getElementById('parallaxWord1');
   const w2    = document.getElementById('parallaxWord2');
-
   const parallaxHandler = () => {
     const y = window.scrollY;
     if (bg)    bg.style.transform    = `translateY(${y * 0.35}px)`;
@@ -437,7 +436,6 @@
     if (w1)    w1.style.transform    = `translateY(${y * 0.25}px) translateX(${y * -0.04}px)`;
     if (w2)    w2.style.transform    = `translateY(${y * -0.18}px) translateX(${y * 0.03}px)`;
   };
-
   window.addEventListener('scroll', parallaxHandler, { passive: true });
 
   const observer = new IntersectionObserver((entries) => {
@@ -448,12 +446,10 @@
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
   document.querySelectorAll('.anim-fade').forEach(el => observer.observe(el));
 
-  const sections = document.querySelectorAll('section[id], div[id="video"]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
+  const sections  = document.querySelectorAll('section[id], div[id="video"]');
+  const navLinks  = document.querySelectorAll('.nav-link');
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -464,8 +460,89 @@
       }
     });
   }, { threshold: 0.4 });
-
   sections.forEach(s => sectionObserver.observe(s));
+
+  (function initWave() {
+    const canvas    = document.getElementById('waveCanvas');
+    const section   = document.getElementById('concept');
+    if (!canvas || !section) return;
+
+    const ctx       = canvas.getContext('2d');
+    const LINES     = 3;
+    const POINTS    = 140;
+    const BASE_AMP  = 55;
+    const MOUSE_AMP = 140;
+    const SPEED     = [0.0010, 0.009, 0.0008, 0.006];
+    const FREQ      = [1.6, 2.2, 1.0, 1.8, 2.6];
+    const ALPHA     = [0.35, 0.30, 0.20, 0.15, 0.10];
+    const COLORS    = ['#d63b2f', '#b83228', '#e85a50', '#c9973c', '#b83228'];
+
+    let mouseX = -9999, mouseY = -9999;
+    let sectionVisible = false;
+    let raf;
+    let t = 0;
+
+    function resize() {
+      canvas.width  = section.offsetWidth;
+      canvas.height = section.offsetHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    section.addEventListener('mousemove', e => {
+      const rect = section.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+    section.addEventListener('mouseleave', () => {
+      mouseX = -9999;
+      mouseY = -9999;
+    });
+
+    const visObs = new IntersectionObserver(entries => {
+      sectionVisible = entries[0].isIntersecting;
+      if (sectionVisible && !raf) loop();
+    }, { threshold: 0.05 });
+    visObs.observe(section);
+
+    function drawWave(lineIndex) {
+      const W   = canvas.width;
+      const H   = canvas.height;
+      const cy  = H * (0.35 + lineIndex * 0.15);
+      const seg = W / (POINTS - 1);
+
+      ctx.beginPath();
+      for (let i = 0; i < POINTS; i++) {
+        const x    = i * seg;
+        const base = Math.sin(i * FREQ[lineIndex] * 0.08 + t * SPEED[lineIndex] * 60000) * BASE_AMP;
+
+        const dx      = x - mouseX;
+        const dy      = cy - mouseY;
+        const dist    = Math.sqrt(dx * dx + dy * dy);
+        const falloff = Math.exp(-dist * dist / (2 * 22000));
+        const bump    = Math.sin(i * 0.3 + t * 0.04) * MOUSE_AMP * falloff;
+
+        const y = cy + base + bump;
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+
+      ctx.strokeStyle = COLORS[lineIndex];
+      ctx.globalAlpha = ALPHA[lineIndex];
+      ctx.lineWidth   = lineIndex === 0 ? 1.5 : 1;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    function loop(timestamp) {
+      if (!sectionVisible) { raf = null; return; }
+      t = timestamp || 0;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < LINES; i++) drawWave(i);
+      raf = requestAnimationFrame(loop);
+    }
+
+  })();
 
 })();
 </script>
